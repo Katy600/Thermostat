@@ -50,5 +50,12 @@ describe('Thermostat', function () {
        thermostat.switchOn();
        expect(thermostat.isPowerSavingOn).toBe(true)
      });
+     //You can reset the temperature to 20 with a reset function
+     it('can reset the temperature to 20 with a reset function', function(){
+       var thermostat = new Thermostat();
+       thermostat.down();
+       thermostat.reset();
+       expect(thermostat.temperature).toBe(20);
+     });
    });
 });

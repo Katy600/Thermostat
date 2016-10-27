@@ -24,6 +24,9 @@ Thermostat.prototype.up = function() {
     this.isPowerSavingOn = true;
   };
 
+  Thermostat.prototype.reset = function() {
+    this.temperature = 20;
+  };
 // };
 // Thermostat.prototype =  {
 //   up: function(){ return this.method2()},
