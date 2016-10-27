@@ -44,11 +44,11 @@ describe('Thermostat', function () {
         }
        expect(thermostat.temperature).toBe(32)
      });
-    //  it('can switch onto power saving mode', function(){
-    //    var thermostat = new Thermostat();
-    //    thermostat.switchOff();
-    //    thermostat.switchOn();
-    //    expect(theremostat.isPowerSavingOn).toBe(true)
-    //  });
+     it('can switch onto power saving mode', function(){
+       var thermostat = new Thermostat();
+       thermostat.switchOff();
+       thermostat.switchOn();
+       expect(thermostat.isPowerSavingOn).toBe(true)
+     });
    });
 });

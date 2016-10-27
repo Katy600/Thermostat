@@ -20,9 +20,9 @@ Thermostat.prototype.up = function() {
     this.isPowerSavingOn = false;
   };
 
-  // Thermostat.prototype.switchOn = function() {
-  //   this.isPowerSavingOn = true;
-  // };
+  Thermostat.prototype.switchOn = function() {
+    this.isPowerSavingOn = true;
+  };
 
 // };
 // Thermostat.prototype =  {
