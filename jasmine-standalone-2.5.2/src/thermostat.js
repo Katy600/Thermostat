@@ -5,7 +5,10 @@ function Thermostat() {
       return this.temperature += 1;
     };
     this.down = function() {
-      return this.temperature -= 1;
+      if (this.temperature > 10) {
+        return this.temperature -= 1;
+      }
+      return this.temperature
     };
 }
 

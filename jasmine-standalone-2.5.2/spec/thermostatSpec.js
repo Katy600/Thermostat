@@ -16,5 +16,12 @@ describe('Thermostat', function () {
         thermostat.down();
         expect(thermostat.temperature).toBe(19);
       });
+      it('has minimum temperature of 10', function () {
+        var thermostat = new Thermostat();
+        for (i = 0; i < 11; i++) {
+          thermostat.down();
+        }
+        expect(thermostat.temperature).toBe(10);
+      });
    });
 });
