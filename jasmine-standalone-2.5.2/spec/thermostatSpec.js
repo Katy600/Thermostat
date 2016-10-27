@@ -10,5 +10,11 @@ describe('Thermostat', function () {
         thermostat.up();
         expect(thermostat.temperature).toBe(21);
       });
+
+      it('can be decrease by 1', function () {
+        var thermostat = new Thermostat();
+        thermostat.down();
+        expect(thermostat.temperature).toBe(19);
+      });
    });
 });
