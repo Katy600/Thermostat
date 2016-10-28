@@ -2,6 +2,8 @@ function Thermostat() {
     'use strict';
     this.temperature = 20;
     this.isPowerSavingOn = true;
+    this.energyMode = "medium-usage"
+
   };
 
 Thermostat.prototype.up = function() {
@@ -30,9 +32,14 @@ Thermostat.prototype.up = function() {
 
   Thermostat.prototype.currentEnergy = function() {
     if(this.temperature < 18) {
-      var text = "low-usage";
-      return text;
+      this.energyMode = "low-usage";
     }
+      else if(this.temperature > 25) {
+        this.energyMode = "high-usage";
+      }
+      else {
+        return "medium-usage";
+      }
   };
 
   // };

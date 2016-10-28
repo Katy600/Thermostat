@@ -61,7 +61,14 @@ describe('Thermostat', function () {
      it("can ask about thermostat's current energy usage - low-usage", function(){
        var thermostat = new Thermostat();
        thermostat.temperature = 17;
-       expect(thermostat.currentEnergy()).toBe("low-usage");
+       thermostat.currentEnergy()
+       expect(thermostat.energyMode).toBe("low-usage");
+     });
+     it("can ask about thermostat's current energy usage - high-usage", function(){
+       var thermostat = new Thermostat();
+       thermostat.temperature = 26;
+       thermostat.currentEnergy()
+       expect(thermostat.energyMode).toBe("high-usage");
      });
    });
 });
