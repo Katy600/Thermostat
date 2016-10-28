@@ -44,6 +44,19 @@ describe('Thermostat', function () {
         }
        expect(thermostat.temperature).toBe(32)
      });
+
+     it('when saving_mode is on, the maximum temperature is 25', function(){
+        var thermostat = new Thermostat();
+        thermostat.switchOn();
+        for (i = 0; i < 15; i++) {
+          thermostat.up();
+        }
+       expect(thermostat.temperature).toBe(25)
+     });
+
+
+
+
      it('can switch onto power saving mode', function(){
        var thermostat = new Thermostat();
        thermostat.switchOff();

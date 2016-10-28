@@ -3,11 +3,12 @@ function Thermostat() {
     this.temperature = 20;
     this.isPowerSavingOn = true;
     this.energyMode = "medium-usage"
+    this.maxMode = 25
 
   };
 
 Thermostat.prototype.up = function() {
-  if (this.temperature < 32) {
+  if (this.temperature < this.maxMode) {
   return this.temperature += 1;
   }
 };
@@ -20,10 +21,12 @@ Thermostat.prototype.up = function() {
 
   Thermostat.prototype.switchOff = function() {
     this.isPowerSavingOn = false;
+    this.maxMode = 32;
   };
 
   Thermostat.prototype.switchOn = function() {
     this.isPowerSavingOn = true;
+    this.maxMode = 25;
   };
 
   Thermostat.prototype.reset = function() {
