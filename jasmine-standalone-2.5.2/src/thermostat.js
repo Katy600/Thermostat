@@ -19,15 +19,26 @@ Thermostat.prototype.up = function() {
     }
   };
 
-  Thermostat.prototype.switchOff = function() {
-    this.isPowerSavingOn = false;
-    this.maxMode = 32;
-  };
+  Thermostat.prototype.switch = function() {
+    if(this.isPowerSavingOn === true) {
+      this.isPowerSavingOn = false
+      this.maxMode = 32
+    }
+    else {
+      this.isPowerSavingOn = true
+      this.maxMode = 25
+    }
+  }
 
-  Thermostat.prototype.switchOn = function() {
-    this.isPowerSavingOn = true;
-    this.maxMode = 25;
-  };
+  // Thermostat.prototype.switchOff = function() {
+  //   this.isPowerSavingOn = false;
+  //   this.maxMode = 32;
+  // };
+  //
+  // Thermostat.prototype.switchOn = function() {
+  //   this.isPowerSavingOn = true;
+  //   this.maxMode = 25;
+  // };
 
   Thermostat.prototype.reset = function() {
     this.temperature = 20;

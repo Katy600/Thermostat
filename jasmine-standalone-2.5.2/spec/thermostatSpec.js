@@ -54,9 +54,6 @@ describe('Thermostat', function () {
        expect(thermostat.temperature).toBe(25)
      });
 
-
-
-
      it('can switch onto power saving mode', function(){
        var thermostat = new Thermostat();
        thermostat.switchOff();
