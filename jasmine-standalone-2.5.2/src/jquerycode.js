@@ -32,5 +32,13 @@ document.getElementById("temperature").innerHTML = thermostat.temperature;
       thermostat.switch();
     });
 
+    function gettingJSON(){
+        document.write("jquery loaded");
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London&APPID=e94cf196f79c9a4953efca1ae95b2ff4",function(json){
+            document.write(JSON.stringify(json));
+        });
+    };
+
+    document.getElementById("weather").innerHTML = gettingJSON();
 
 });
