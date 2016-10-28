@@ -27,6 +27,15 @@ Thermostat.prototype.up = function() {
   Thermostat.prototype.reset = function() {
     this.temperature = 20;
   };
+
+  Thermostat.prototype.currentEnergy = function() {
+    if(this.temperature < 18) {
+      var text = "low-usage";
+      return text;
+    }
+  };
+
+  // };
 // };
 // Thermostat.prototype =  {
 //   up: function(){ return this.method2()},
